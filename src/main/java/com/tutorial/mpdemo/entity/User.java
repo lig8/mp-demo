@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @TableName(value = "user")
 @Data
 @Builder
@@ -13,7 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class User  {
     @TableId(type = IdType.AUTO)
-    private Integer id;
+    private Long id;
 
     @TableField("name")
     private String name;
